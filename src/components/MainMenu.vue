@@ -164,6 +164,11 @@ export default {
   .c-navbar {
     z-index: 2000;
   }
+  .navbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
   .navbar-brand > img {
   display: inline-block;
   }
