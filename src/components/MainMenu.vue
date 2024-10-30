@@ -21,7 +21,7 @@
          
         </div>
         <div id="navbar"
-              :class="{ collapse: true, 'navbar-collapse': true, in: isExpanded }"
+              :class="{ collapse: false, 'navbar-collapse': false, in: isExpanded }"
               class="text-white font-semibold text-sm flex items-center">
             <ul class="nav navbar-nav navbar-right flex items-center">
               <li>
