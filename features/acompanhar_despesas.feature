@@ -9,6 +9,3 @@ Feature: Acompanha despesa de um programa do governo no site Cuidando.vc
     Given que eu acesso o site "https://cuidando.vc/despesa/2022/2022.25.10.13.392.3001.33903900.90.39.0.2436"
     When eu clico o botão "button.btn:nth-child(3)"
     Then eu devo ver "Acesse nossa plataforma"
-
-#método when em acessa_pagina_sobre_steps.rb
-#método Then em pesquisar_ano_steps.rb

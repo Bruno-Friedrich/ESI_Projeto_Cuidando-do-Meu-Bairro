@@ -10,5 +10,3 @@ Feature: Acessar aba analises
     When eu clico o botão ".nav > li:nth-child(3) > a:nth-child(1)"
     #Then devo ver a url "http://localhost:8080/analises"
     Then devo ver a url "https://cuidando.vc/analises"
-
-#método when em acessa_pagina_sobre_steps.rb

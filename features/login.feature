@@ -12,7 +12,3 @@ Feature: Faz login no site
     When eu preencho o campo "login-form-password" com "parafuzeta"
     When eu clico o botão "button.btn:nth-child(5)"
     Then eu devo ver "Papagaio"
-
-#método preencher when em pesquisar_ano_steps.rb
-#método botão when em acessa_pagina_sobre_steps.rb
-#método Then em pesquisar_ano_steps.rb
