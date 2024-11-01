@@ -5,7 +5,7 @@
       <div class="c-home__distribution lg:grid lg:grid-cols-2">
         <div class="c-home__distribution-descrition bg-gray-100 mx-auto p-28 flex flex-col justify-center">
           <h2 class="text-neutral-base text-5xl font-bold mb-5">Quantidade e<br/> distribuição de recursos <br />por tipo em {{ year }}</h2>
-          <p class="text-neutral-light text-xl">Aqui estão todas as informações sobre os gastos públicos na cidade de São Paulo. Elas são obtidas através do <a href="https://orcamento.prefeitura.sp.gov.br/orcamento/execucao.php" target="_blank" class="underline text-secondary-base">portal de transparência</a>.</p>
+          <p class="text-neutral-light text-xl">Aqui estão todas as informações sobre os gastos públicos na cidade de São Paulo. Elas são obtidas através do <a href="https://orcamento.sf.prefeitura.sp.gov.br/orcamento/execucao.php" target="_blank" class="underline text-secondary-base">portal de transparência</a>.</p>
           <p class="text-neutral-light text-xl">Nossa equipe buscou por termos para poder realizar a geolocalização dos mesmos, mas nem sempre isso é possível. Aqui mostramos as estatísticas do que está mapeado e do que não está tanto em termos absolutos (número de atividades) ou relativos à quantidade de recursos.</p>
         </div>
         <div class="c-home__distribution-data container mx-auto p-28 flex flex-col justify-center bg-gray-50">

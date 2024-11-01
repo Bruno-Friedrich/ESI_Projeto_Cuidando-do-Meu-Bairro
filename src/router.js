@@ -7,13 +7,15 @@ import Pessoa from './views/Pessoa.vue'
 
 Vue.use(Router)
 
+let currentYear = new Date().getFullYear();
+
 let router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
-      redirect: `/2022/1`
+      redirect: `/${currentYear}/1`
     },
     {
       path: '/despesa/:year/:code',
