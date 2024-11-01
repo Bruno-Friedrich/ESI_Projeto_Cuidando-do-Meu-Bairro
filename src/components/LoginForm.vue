@@ -38,6 +38,22 @@
             </div>
           </transition>
 
+          <!-- Confirm Password -->
+            <transition name="fade" mode="out-in">
+              <div class="form-group mt-3" v-if="view === 'register' || view === 'forgot2'">
+                <label class="block mb-2 text-sm font-medium text-neutral-base" for="login-form-confirm-password">
+                    {{ $t('Confirm Password') }}
+                </label>
+                <input type="password"
+                  :class="['form-control', checkFieldError('confirm-password')]"
+                  id="login-form-confirm-password"
+                  class="bg-gray-50 border border-gray-300 text-neutral-base text-sm rounded-lg focus:ring-primary-dark focus:border-primary-dark block w-full p-2.5"
+                  v-model="passwordConf"
+                  :placeholder="$t('Confirm Password')"
+                />
+              </div>
+          </transition>
+
           <!-- Email -->
           <transition name="fade" mode="out-in">
             <div class="form-group mt-3" v-if="view !== 'login'">
@@ -71,21 +87,7 @@
             </div>
           </transition>
 
-          <!-- Confirm Password -->
-          <transition name="fade" mode="out-in">
-            <div class="form-group mt-3" v-if="view === 'register' || view === 'forgot2'">
-              <label class="block mb-2 text-sm font-medium text-neutral-base" for="login-form-confirm-password">
-                  {{ $t('Confirm Password') }}
-              </label>
-              <input type="password"
-                :class="['form-control', checkFieldError('confirm-password')]"
-                id="login-form-confirm-password"
-                class="bg-gray-50 border border-gray-300 text-neutral-base text-sm rounded-lg focus:ring-primary-dark focus:border-primary-dark block w-full p-2.5"
-                v-model="passwordConf"
-                :placeholder="$t('Confirm Password')"
-              />
-            </div>
-          </transition>
+          
 
           <div class="mt-3 flex justify-between text-sm font-medium text-neutral-base">
             <div class="text-sm font-medium text-neutral-base">

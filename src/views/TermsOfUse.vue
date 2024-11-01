@@ -1,6 +1,6 @@
 <template>
   <div class="pg-terms">
-    <div class="container mx-auto pt-20 max-h-96">
+    <div class="container mx-auto pt-20 pb-32 max-w-7xl px-4">
       <h1 class="text-neutral-base text-3xl text-center font-bold">
         Termos de Uso
       </h1>
@@ -63,6 +63,7 @@
         </p>
       </div>
     </div>
+    <FooterInfo />
   </div>
 </template>
 
@@ -73,3 +74,19 @@ export default {
   components: { FooterInfo },
 };
 </script>
+
+<style scoped>
+.pg-terms {
+  min-height: 100vh; /* Garante que a página ocupe toda a altura da janela */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+}
+
+.pb-32 {
+  padding-bottom: 8rem; /* Adiciona espaço no final da página para o footer */
+}
+</style>

@@ -13,6 +13,7 @@
     "apexcharts": "^3.35.0",
     "autoprefixer": "^9.8.6",
     "flowbite": "^1.4.2",
+    "leaflet": "^1.9.4",
     "node-sass": "^4.0.0",
     "postcss": "^8.0.0",
     "tailwindcss": "^3",
@@ -24,6 +25,7 @@
     "vue-lazytube": "^1.1.1",
     "vue-popperjs": "^2.3.0",
     "vue-router": "^3.0.1",
+    "vue2-leaflet": "^2.7.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
