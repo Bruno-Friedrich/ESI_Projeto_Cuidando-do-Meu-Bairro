@@ -10,5 +10,3 @@ Feature: Acessar aba sobre
     When eu clico o botão ".nav > li:nth-child(1) > a:nth-child(1)"
     Then devo ver a url "https://cuidando.vc/sobre"
     #Then devo ver a url "http://localhost:8080/sobre"
-    
-#método when em acessa_pagina_sobre_steps.rb
