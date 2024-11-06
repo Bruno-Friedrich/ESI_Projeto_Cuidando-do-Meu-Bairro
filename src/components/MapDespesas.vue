@@ -17,10 +17,10 @@
 
     <div class="map__card-content container mx-auto">
       <div v-if="expanded" class="my-auto mx-auto h-full lg:flex flex-col justify-center max-w-md lg:absolute">
-        <div class="bg-white lg:pb-10 lg:p-10 pt-10 pb-3 mb-5 lg:rounded-lg lg:shadow-lg">
+        <div class="bg-white lg:pb-10 lg:p-10 pt-10 pb-3 mb-5 lg:rounded-lg lg:shadow-lg sm: p-6">
           <div class="c-map__title mb-5">
-          <h1 class="text-neutral-base lg:text-3xl lg:text-left text-center text-xl font-bold">Acompanhe os gastos públicos da cidade de São Paulo em tempo real</h1>
-          <p class="text-neutral-light lg:text-base lg:text-left text-center text-sm mt-2">O projeto Cuidando do Meu Bairro propõe tornar mais inteligível a visualização dos dados das despesas públicas a partir da geolocalização dos gastos</p>
+          <h1 class="text-neutral-base lg:text-3xl text-left text-xl font-bold mb-4">Acompanhe os gastos públicos da cidade de São Paulo em tempo real</h1>
+          <p class="text-neutral-light lg:text-base text-left text-sm mt-2">O projeto Cuidando do Meu Bairro propõe tornar mais inteligível a visualização dos dados das despesas públicas a partir da geolocalização dos gastos</p>
         </div>
         <div class="">
           <div class="c-map__search-address lg:mb-5 mb-3">
@@ -59,7 +59,7 @@
         </div>
         </div>
         
-        <div class="c-map__legend flex rounded-lg lg:shadow-lg justify-center items-center bg-white p-1">
+        <div class="c-map__legend flex rounded-lg lg:shadow-lg justify-around items-center bg-white p-1 sm: px-6 sm: mb-4">
             <span class="text-neutral-base text-sm font-bold">{{ $t("Map legend") }}:</span>
             <div
               v-for="category in categories"
