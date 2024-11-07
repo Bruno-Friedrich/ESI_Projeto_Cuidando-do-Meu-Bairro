@@ -31,7 +31,7 @@
         ]"
       >
 
-        <ul class="nav navbar-nav navbar-right flex flex-col gap-4 lg:gap-0 lg:flex-row items-center">
+        <ul class="nav navbar-nav navbar-right flex flex-col gap-6 lg:gap-0 lg:flex-row items-center">
           <li>
             <router-link class="p-4 mx-1 hover:bg-primary-dark hover:bg-opacity-80 hover:rounded" to="/sobre">{{ $t('About') }}</router-link>
           </li>
