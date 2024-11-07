@@ -8,7 +8,7 @@
           <p class="text-neutral-light text-lg sm:text-xl">Aqui estão todas as informações sobre os gastos públicos na cidade de São Paulo. Elas são obtidas através do <a href="https://orcamento.sf.prefeitura.sp.gov.br/orcamento/execucao.php" target="_blank" class="underline text-secondary-base">portal de transparência</a>.</p>
           <p class="text-neutral-light text-lg sm:text-xl">Nossa equipe buscou por termos para poder realizar a geolocalização dos mesmos, mas nem sempre isso é possível. Aqui mostramos as estatísticas do que está mapeado e do que não está tanto em termos absolutos (número de atividades) ou relativos à quantidade de recursos.</p>
         </div>
-        <div class="c-home__distribution-data container mx-auto p-6 sm:p-10 md:p-16 lg:p-28 flex flex-col justify-center bg-gray-50">
+        <div class="c-home__distribution-data lg:container mx-auto p-6 sm:p-10 md:p-16 lg:p-28 flex flex-col justify-center bg-gray-50">
             <div class="text-center">
               <year-charts/>
             </div>
