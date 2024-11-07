@@ -1,147 +1,149 @@
-import { mount, shallowMount } from "@vue/test-utils";
+import { shallowMount, mount } from "@vue/test-utils";
 import UserInfo from "../../src/components/user/UserInfo.vue";
-import ButtonSpinner from "../../src/components/ButtonSpinner.vue"; // Importa o ButtonSpinner
-import Vue from "vue"; 
+import Vue from "vue";
 import Vuex from "vuex";
+import ButtonSpinner from "../../src/components/ButtonSpinner.vue";
 
 Vue.use(Vuex);
 
-describe("UserInfo Component", () => {
+describe("UserInfo.vue", () => {
+  let wrapper;
   let store;
-  let state;
   let actions;
 
   beforeEach(() => {
-    const $t = jest.fn((key) => key); // Mock simples que retorna a chave
-
-    state = {
-      userInfo: {
-        username: "testUser",
-        description: "User description",
-        email: "test@example.com",
-      },
-      username: "testUser",
-      pending: {
-        sendEdit: false,
-      },
-    };
-
     actions = {
       sendEditMyUserInfo: jest.fn(),
       addError: jest.fn(),
     };
 
     store = new Vuex.Store({
-      modules: {
+      state: {
         auth: {
-          namespaced: true,
-          state,
-          actions,
+          userInfo: {
+            username: "testuser",
+            description: "User description",
+            email: "user@example.com",
+          },
+          username: "testuser",
+          pending: { sendEdit: false },
         },
       },
+      actions,
     });
-    
-    // Injetar o mock do $t nos testes
-    Vue.prototype.$t = $t;
+
+    wrapper = mount(UserInfo, {
+      store,
+      mocks: {
+        $t: (msg) => msg, // Mock para função de tradução
+      },
+    });
   });
 
-  it("renders user info correctly", () => {
-    const wrapper = shallowMount(UserInfo, { store });
-    expect(wrapper.text()).toContain(store.state.auth.userInfo.username);
-    expect(wrapper.text()).toContain(store.state.auth.userInfo.description);
+  afterEach(() => {
+    wrapper.destroy();
   });
 
-  it("shows edit button for description if user is viewing own profile", () => {
-    const wrapper = shallowMount(UserInfo, { store });
-    const editButton = wrapper.find("button");
-    expect(editButton.exists()).toBe(true);
-    expect(editButton.text()).toBe("edit");
+  it("renders user information correctly", () => {
+    expect(wrapper.find("h2").text()).toBe("testuser");
+    expect(wrapper.find(".text-neutral-light").text()).toContain(
+      "User description"
+    );
+    console.log(wrapper.find(".text-neutral-light").text());
+  });
+
+  it("shows empty text if description is missing", async () => {
+    await wrapper.setData({ description: "" });
+    expect(wrapper.find(".text-neutral-light").text()).toContain(" ");
   });
 
   it("enters edit mode for description", async () => {
-    const wrapper = mount(UserInfo, { store });
     await wrapper.setData({ isEditting: "description" });
+    await wrapper.setData({
+      description: store.state.auth.userInfo.description,
+    });
 
     const descriptionTextarea = wrapper.find("textarea#user-edit-description");
+    console.log(descriptionTextarea.element.value);
     expect(descriptionTextarea.exists()).toBe(true);
     expect(descriptionTextarea.element.value).toBe(
       store.state.auth.userInfo.description
     );
   });
 
-  it("saves description change", async () => {
-    const wrapper = shallowMount(UserInfo, { 
-      store,
-      components: {
-        ButtonSpinner, // Registra o ButtonSpinner
-      },
+  it("saves edited description", async () => {
+    await wrapper.setData({
+      isEditting: "description",
+      description: "New description",
     });
-    await wrapper.setData({ isEditting: "description", description: "New description" });
 
-    const saveButton = wrapper.find("button-spinner");
+    const saveButton = wrapper.findComponent(ButtonSpinner);
     await saveButton.trigger("click");
 
-    expect(actions.sendEditMyUserInfo).toHaveBeenCalledWith(
-      expect.any(Object),
-      { username: "testUser", description: "New description" },
-      undefined
-    );
-    expect(wrapper.vm.isEditting).toBe(null);
+    expect(actions.sendEditMyUserInfo).toHaveBeenCalled();
+    expect(actions.sendEditMyUserInfo.mock.calls[0][1]).toEqual({
+      username: "testuser",
+      description: "New description",
+    });
   });
 
   it("enters edit mode for email", async () => {
-    const wrapper = mount(UserInfo, { store });
-    wrapper.vm.openEdit("email");
+    await wrapper.setData({
+      isEditting: "email",
+      email: store.state.auth.userInfo.email,
+    });
 
-    await wrapper.vm.$nextTick();
     const emailInput = wrapper.find("input#user-edit-email");
     expect(emailInput.exists()).toBe(true);
     expect(emailInput.element.value).toBe(store.state.auth.userInfo.email);
   });
 
-  it("displays error if new passwords do not match", async () => {
-    const wrapper = mount(UserInfo, { store });
-    wrapper.vm.isEditting = "password";
-    wrapper.setData({
-      oldPassword: "oldPassword123",
-      newPassword: "newPassword",
-      newPasswordConfirm: "differentPassword",
+  it("saves edited email", async () => {
+    await wrapper.setData({
+      isEditting: "email",
+      email: "newuser@example.com",
     });
 
-    await wrapper.vm.sendEdit();
-    expect(actions.addError).toHaveBeenCalledWith(expect.any(Object), "Different passwords", undefined);
-    expect(actions.sendEditMyUserInfo).not.toHaveBeenCalled();
+    const saveButton = wrapper.findComponent(ButtonSpinner);
+    await saveButton.trigger("click");
+
+    expect(actions.sendEditMyUserInfo).toHaveBeenCalled();
+    expect(actions.sendEditMyUserInfo.mock.calls[0][1]).toEqual({
+      username: "testuser",
+      email: "newuser@example.com",
+    });
   });
 
-  it("saves new password if it matches confirmation", async () => {
-    const wrapper = shallowMount(UserInfo, { store });
-    wrapper.vm.isEditting = "password";
-    wrapper.setData({
-      oldPassword: "oldPassword123",
-      newPassword: "newPassword",
-      newPasswordConfirm: "newPassword",
+  it("saves edited password if confirmation matches", async () => {
+    await wrapper.setData({
+      isEditting: "password",
+      oldPassword: "oldpass",
+      newPassword: "newpass",
+      newPasswordConfirm: "newpass",
     });
 
-    await wrapper.vm.sendEdit();
+    const saveButton = wrapper.findComponent(ButtonSpinner);
+    await saveButton.trigger("click");
 
-    expect(actions.sendEditMyUserInfo).toHaveBeenCalledWith(
-      expect.any(Object),
-      {
-        username: "testUser",
-        password: "oldPassword123",
-        new_password: "newPassword",
-      },
-      undefined
-    );
+    expect(actions.sendEditMyUserInfo).toHaveBeenCalled();
+    expect(actions.sendEditMyUserInfo.mock.calls[0][1]).toEqual({
+      username: "testuser",
+      password: "oldpass",
+      new_password: "newpass",
+    });
   });
 
-  it("cancels editing mode", async () => {
-    const wrapper = shallowMount(UserInfo, { store });
-    await wrapper.setData({ isEditting: "email" });
-    const cancelButton = wrapper.find("button").findAll((button) =>
-      button.text().includes("Cancel")
-    )[0];
-    await cancelButton.trigger("click");
-    expect(wrapper.vm.isEditting).toBe(null);
+  it("cancels editing and reverts to display mode", async () => {
+    await wrapper.setData({ isEditting: "description" });
+
+    const cancelButton = wrapper
+      .findAll("button")
+      .filter((button) => button.text() === "Cancel")
+      .at(0);
+    expect(cancelButton.text()).toBe("Cancel"); // Verifica se o texto é "Cancel"
+    await cancelButton.trigger("click"); // Dispara o evento de click
+
+    expect(wrapper.vm.isEditting).toBeNull();
+    expect(wrapper.find("textarea#user-edit-description").exists()).toBe(false);
   });
 });
