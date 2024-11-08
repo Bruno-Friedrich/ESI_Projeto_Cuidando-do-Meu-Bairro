@@ -235,7 +235,8 @@ export default {
       if (this.isEditting === "email") {
         data.email = this.email;
       } else if (this.isEditting === "description") {
-        data.description = this.description != "" ? this.description : " ";
+        data.description =
+          this.description != "" ? this.description : "Sem descrição";
       } else if (this.isEditting === "password") {
         if (this.newPassword !== this.newPasswordConfirm) {
           this.addError("Different passwords");
