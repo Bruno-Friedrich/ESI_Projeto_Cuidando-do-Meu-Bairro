@@ -3,7 +3,9 @@ import { baseUrls } from '@/configs'
 import { http } from '@/utils'
 
 http.interceptors.request.use(config => {
-  config.headers['Content-Type'] = 'application/xml';
+  if(config.baseURL && (config.baseURL.includes('/gastos_abertos') || config.baseURL.includes('/esiclivre') || config.baseURL.includes('/tagarela'))) {
+    config.headers['Content-Type'] = 'application/xml';
+  }
   return config;
 });
 
