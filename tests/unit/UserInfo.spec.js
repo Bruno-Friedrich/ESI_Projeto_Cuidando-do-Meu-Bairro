@@ -49,7 +49,6 @@ describe("UserInfo.vue", () => {
     expect(wrapper.find(".text-neutral-light").text()).toContain(
       "User description"
     );
-    console.log(wrapper.find(".text-neutral-light").text());
   });
 
   it("shows empty text if description is missing", async () => {
@@ -64,7 +63,6 @@ describe("UserInfo.vue", () => {
     });
 
     const descriptionTextarea = wrapper.find("textarea#user-edit-description");
-    console.log(descriptionTextarea.element.value);
     expect(descriptionTextarea.exists()).toBe(true);
     expect(descriptionTextarea.element.value).toBe(
       store.state.auth.userInfo.description
