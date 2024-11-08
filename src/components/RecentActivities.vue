@@ -1,7 +1,7 @@
 <template>
   <div class="activities">
-    <h2 class="text-neutral-base text-3xl font-bold mb-3">{{ $t('Recent Activities') }}</h2>
-    <p class="text-neutral-light text-xl mb-10">
+    <h2 class="text-neutral-base sm: text-2xl md:text-3xl font-bold mb-3">{{ $t('Recent Activities') }}</h2>
+    <p class="text-neutral-light md:text-xl sm: text-lg mb-10">
       Acompanhe as últimas atividades da plataforma Cuidando do Meu Bairro
     </p>
     <ol class="relative border-l border-gray-200">                  
@@ -9,7 +9,7 @@
           <div class="absolute w-6 h-6 bg-white rounded-full mt-0.5 -left-3 border border-white">
             <img :src="getIcon(activity)">
           </div>
-          <time class="text-sm font-normal leading-none text-gray-400">{{ formatDate(activity.date) }}</time>
+          <time class="text-sm  font-normal leading-none text-gray-400">{{ formatDate(activity.date) }}</time>
           <span v-if="activity.comments">
             <h3 class="text-lg font-semibold text-neutral-base flex mt-2">
                Um novo comentário

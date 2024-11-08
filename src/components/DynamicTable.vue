@@ -50,7 +50,7 @@
           </div>
         </div>
     </div>
-    <nav aria-label="Table navigation" class="mt-5 mb-10 flex justify-end">
+    <nav aria-label="Table navigation" class="mt-5 mb-10 flex justify-end sm: mr-4">
       <ul class="inline-flex -space-x-px">
       <li aria-controls="my-table">
           <router-link :to="{ params: { page: 1 } }"
