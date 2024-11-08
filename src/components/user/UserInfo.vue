@@ -195,8 +195,13 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
+import ButtonSpinner from "../ButtonSpinner.vue"; // Ajuste o caminho conforme sua estrutura de diretórios
+
 export default {
   name: "user-info",
+  components: {
+    ButtonSpinner,
+  },
   data() {
     return {
       email: "",
