@@ -1,13 +1,11 @@
-Capacidade de Manutenção
+# **Cuidando do Meu Bairro**  
+## Projeto de Engenharia de Sistemas de Informação
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/6a19814e972f76c2beb0/maintainability)](https://codeclimate.com/github/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/maintainability)
 
-Cobertura de Testes
-[![Test Coverage](https://api.codeclimate.com/v1/badges/6a19814e972f76c2beb0/test_coverage)](https://codeclimate.com/github/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/test_coverage)
+**Badge de Manutenibilidade:** Esta badge de *Maintainability* (Manutenibilidade) é fornecida pelo [CodeClimate](https://codeclimate.com/) e reflete a qualidade geral do código do projeto em termos de facilidade de manutenção e legibilidade. A pontuação é baseada em uma análise de fatores como complexidade, duplicação de código, e aderência a padrões de boas práticas. Uma pontuação mais alta significa que o código é mais fácil de entender, atualizar e manter ao longo do tempo.
 
-# CMeubairro
-## **Trabalho de Engenharia de Sistemas de Informação**
-
-Trabalhando com o código legado do site cuidando.vc
+Este projeto envolve trabalho com código legado do site [cuidando.vc](https://cuidando.vc), e a badge é uma métrica importante para monitorar a qualidade e a manutenibilidade desse código enquanto ele é aprimorado.
 
 ## Testes
 Casos testes feitos utilizando WSL Ubuntu
@@ -25,7 +23,7 @@ Para rodar utilizar as tags na primeira linha dos arquivos .feature<br/> <br/>
       
 Ou somente escrever `cucumber` para rodar todos os testes
 
-# website2
+## Executando o website
 
 ## Project setup
 ```
