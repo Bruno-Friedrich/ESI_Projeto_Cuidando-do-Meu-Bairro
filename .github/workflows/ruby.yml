@@ -3,10 +3,10 @@ name: CI Cucumber
 on:
   push:
     branches:
-      - main  # Executa o workflow em pushes na branch 'main'
+      - master  # Executa o workflow em pushes na branch 'main'
   pull_request:
     branches:
-      - main  # Executa o workflow em pull requests na branch 'main'
+      - master  # Executa o workflow em pull requests na branch 'main'
 
 jobs:
   test:
