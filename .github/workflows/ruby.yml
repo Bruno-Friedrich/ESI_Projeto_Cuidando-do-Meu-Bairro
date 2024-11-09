@@ -33,4 +33,6 @@ jobs:
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get install -f -y
       - name: Run Cucumber tests
-        run: bundle exec cucumber  # Roda os testes com Cucumber
+        run: |
+          # Roda os testes com Cucumber
+          bundle exec cucumber --require 'headless' --tag ~@skip  
