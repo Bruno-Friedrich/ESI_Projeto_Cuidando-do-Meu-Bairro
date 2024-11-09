@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - main  # Executa o workflow quando houver push na branch 'main'
+      - master  # Executa o workflow quando houver push na branch 'main'
   pull_request:
     branches:
-      - main  # Executa o workflow em pull requests na branch 'main'
+      - master  # Executa o workflow em pull requests na branch 'main'
 
 jobs:
   test:
@@ -25,4 +25,4 @@ jobs:
         run: npm install  # Instala as dependências do projeto
 
       - name: Run tests
-        run: npm test:unit  # Roda os testes (altere o comando se necessário)
+        run: npm run test:unit  # Roda os testes (altere o comando se necessário)
