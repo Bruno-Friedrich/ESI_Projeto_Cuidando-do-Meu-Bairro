@@ -2,8 +2,8 @@
 ## Projeto de Engenharia de Sistemas de Informação
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/6a19814e972f76c2beb0/maintainability)](https://codeclimate.com/github/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/maintainability)
-[![Node.js CI](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/node.js.yml)
-[![Ruby CI](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/ruby.yml/badge.svg?branch=main)](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/ruby.yml)
+[![Node.js CI](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/node.js.yml)
+[![Ruby CI](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/ruby.yml/badge.svg?branch=master)](https://github.com/Bruno-Friedrich/ESI_Projeto_Cuidando-do-Meu-Bairro/actions/workflows/ruby.yml)
 
 **Badge de Manutenibilidade:** Esta badge de *Maintainability* (Manutenibilidade) é fornecida pelo [CodeClimate](https://codeclimate.com/) e reflete a qualidade geral do código do projeto em termos de facilidade de manutenção e legibilidade. A pontuação é baseada em uma análise de fatores como complexidade, duplicação de código, e aderência a padrões de boas práticas. Uma pontuação mais alta significa que o código é mais fácil de entender, atualizar e manter ao longo do tempo.
 
