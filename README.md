@@ -69,7 +69,7 @@ As pessoa que contribuíram para o projeto
 <table>
   <tr>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/Bruno-Friedrich">
         <img src="https://avatars.githubusercontent.com/u/81971651?s=400&u=548b7cc3deb1bd124ba02dbc2acc865b97138ce3&v=4" width="100px;" alt="Foto do Bruno Friedrich no Github"/><br>
         <sub>
           <b>Bruno Friedrich</b>
@@ -77,7 +77,7 @@ As pessoa que contribuíram para o projeto
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/saraiva03">
         <img src="https://avatars.githubusercontent.com/u/129121274?v=4" width="100px;" alt="Foto da Gabriella Saraiva no Github"/><br>
         <sub>
           <b>Gabriella Saraiva</b>
@@ -85,7 +85,7 @@ As pessoa que contribuíram para o projeto
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/malthus42">
         <img src="https://avatars.githubusercontent.com/u/110798606?v=4" width="100px;" alt="Foto do Matheus Lopes no Github"/><br>
         <sub>
           <b>Matheus Lopes</b>
@@ -93,7 +93,7 @@ As pessoa que contribuíram para o projeto
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/pabloassuncao">
         <img src="https://avatars.githubusercontent.com/u/72453638?v=4" width="100px;" alt="Foto do Pablo Assunção no Github"/><br>
         <sub>
           <b>Pablo Assunção</b>
@@ -101,7 +101,7 @@ As pessoa que contribuíram para o projeto
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/irpedro">
         <img src="https://avatars.githubusercontent.com/u/99945573?v=4" width="100px;" alt="Foto do Pedro Gabriel no Github"/><br>
         <sub>
           <b>Pedro Gabriel</b>
@@ -109,7 +109,7 @@ As pessoa que contribuíram para o projeto
       </a>
     </td>
     <td align="center">
-      <a href="#">
+      <a href="https://github.com/YannisPontuschka">
         <img src="https://avatars.githubusercontent.com/u/56230345?v=4" width="100px;" alt="Foto do Yannis Pontuschka no Github"/><br>
         <sub>
           <b>Yannis Pontuschka</b>
