@@ -1,0 +1,38 @@
+name: CI Cucumber
+
+on:
+  push:
+    branches:
+      - master  # Executa o workflow em pushes na branch 'main'
+  pull_request:
+    branches:
+      - master  # Executa o workflow em pull requests na branch 'main'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'  # Substitua pela versão desejada do Ruby
+
+      - name: Install dependencies
+        run: bundle install  # Instala as gems do Gemfile
+
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libnss3 libxss1 libappindicator1 libindicator7
+      - name: Install Chrome
+        run: |
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get install -f -y
+      - name: Run Cucumber tests
+        run: |
+          # Roda os testes com Cucumber
+          bundle exec cucumber --require 'headless' --tags "not @skip" 

@@ -194,12 +194,10 @@
             <div class="mt-3">
                 <ul class="space-y-1 max-w-md list-disc list-inside text-gray-500 dark:text-gray-400">
                     <li>
-                        <a class="text-secondary-base underline" href="https://www.tesourotransparente.gov.br/publicacoes/manual-de-contabilidade-aplicada-ao-seto
-                        r-publico-mcasp/2021/26" target="_blank">Manual de Contabilidade Aplicada ao Setor Público</a>
+                        <a class="text-secondary-base underline" href="https://www.tesourotransparente.gov.br/publicacoes/manual-de-contabilidade-aplicada-ao-setor-publico-mcasp/2021/26" target="_blank">Manual de Contabilidade Aplicada ao Setor Público</a>
                     </li>
                     <li>
-                        <a class="text-secondary-base underline" href="https://www.saopaulo.sp.leg.br/wp-content/uploads/2021/04/ProcessoDigital_ProcessoPrincip
-                        al_PL_236_2021.pdf" target="_blank">LDO</a>
+                        <a class="text-secondary-base underline" href="https://www.saopaulo.sp.leg.br/wp-content/uploads/2021/04/ProcessoDigital_ProcessoPrincipal_PL_236_2021.pdf" target="_blank">LDO</a>
                     </li>
                     <li>
                         <a class="text-secondary-base underline" href="https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/DetailsDetalhado?COD_MTRA_LEGL=1

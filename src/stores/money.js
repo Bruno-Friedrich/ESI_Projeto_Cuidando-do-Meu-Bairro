@@ -2,6 +2,13 @@ import Vapi from 'vuex-rest-api'
 import { baseUrls } from '@/configs'
 import { http } from '@/utils'
 
+http.interceptors.request.use(config => {
+  if(config.baseURL && (config.baseURL.includes('/gastos_abertos') || config.baseURL.includes('/esiclivre') || config.baseURL.includes('/tagarela'))) {
+    config.headers['Content-Type'] = 'application/xml';
+  }
+  return config;
+});
+
 // Gastos Abertos
 export default new Vapi({
   axios: http,

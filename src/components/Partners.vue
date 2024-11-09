@@ -9,7 +9,7 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 mb-2 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://www.avina.net/pt/avina-americas-3/" target="_blank">
           <img
             src="../assets/images/logo-parceiros/avina.png"
             alt="Avina Americas"
@@ -19,7 +19,7 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 mb-2 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="" class="flex justify-center">
+        <a href="https://idatosabiertos.org/" target="_blank" class="flex justify-center">
           <img
             src="../assets/images/logo-parceiros/ilda.png"
             alt="La Iniciativa Latinoamericana por los Datos Abiertos - ILDA"
@@ -29,7 +29,7 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 mb-2 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://www.od4d.net/" target="_blank">
           <img
             src="../assets/images/logo-parceiros/open-data-development.png"
             alt="Open Data for Development"
@@ -40,7 +40,7 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 mb-2 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://okfn.org/en/" target="_blank">
           <img
             src="../assets/images/logo-parceiros/ok.png"
             alt="Open Knowledge Brasil"
@@ -50,14 +50,14 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 mb-2 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://colab.each.usp.br/" target="_blank">
           <img src="../assets/images/logo-parceiros/colab.png" alt="COLAB" />
         </a>
       </div>
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://www.fecap.br/" target="_blank">
           <img src="../assets/images/logo-parceiros/fecap.png" alt="Fecap" />
         </a>
       </div>
@@ -71,7 +71,7 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://www.gandi.net/en-US " target="_blank">
           <img
             src="../assets/images/logo-parceiros/gandi.png"
             alt="Gandi.net"
@@ -81,7 +81,7 @@
       <div
         class="p-6 mx-3 lg:w-1/5 h-32 flex items-center justify-center border-2 rounded-md text-border-base"
       >
-        <a href="">
+        <a href="https://www.browserstack.com/" target="_blank">
           <img
             src="../assets/images/logo-parceiros/bs.png"
             alt="BrowserStack"
