@@ -24,5 +24,13 @@ jobs:
       - name: Install dependencies
         run: bundle install  # Instala as gems do Gemfile
 
+          # Install Google Chrome
+      - name: Install Google Chrome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb || sudo apt-get -f install -y
+
       - name: Run Cucumber tests
         run: bundle exec cucumber  # Roda os testes com Cucumber
