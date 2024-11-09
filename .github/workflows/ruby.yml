@@ -35,4 +35,4 @@ jobs:
       - name: Run Cucumber tests
         run: |
           # Roda os testes com Cucumber
-          --require 'headless' --tags "not @skip" 
+          bundle exec cucumber --require 'headless' --tags "not @skip" 
