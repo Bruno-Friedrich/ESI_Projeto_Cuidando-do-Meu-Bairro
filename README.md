@@ -15,9 +15,11 @@ Casos testes feitos utilizando WSL Ubuntu
 
 Necessário ter **Ruby 3.2.3**, **Gem Bundle 2.5.22** e **Chrome 130.0** instalados e atualizados<br/> <br/> 
 Para instalar os pacotes, **cucumber 9.2.0**, **capybara 3.40**, **selenium 4.10**, entre outros, acessar a pasta do projeto e escrever no terminal: <br/> <br/> 
-  `sudo bundle install`
+  ```
+  sudo bundle install
+  ```
 
-Para rodar utilizar os nomes das tags escrita na primeira linha dos arquivos .feature<br/> <br/> 
+Para rodar os testes individualmente utilizar os nomes das tags escrita na primeira linha dos arquivos .feature<br/> <br/> 
   `cucumber --tags @NOME_DA_TAG`<br/> <br/> 
     Exemplo:<br/> 
       `cucumber --tags @acessa_site`<br/> 
